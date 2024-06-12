@@ -27,10 +27,10 @@
 @section('plugins.PaceProgress', true)
 @section('plugins.Select2', true)
 @section('plugins.Sparklines', true)
-{{-- @section('plugins.Summernote', true) --}}
+@section('plugins.Summernote', false)
 @section('plugins.Sweetalert2', true)
-{{-- @section('plugins.TempusdominusBootstrap4', true)
-@section('plugins.Toastr', true) --}}
+@section('plugins.TempusdominusBootstrap4', false)
+@section('plugins.Toastr', false)
 
 @section('title', 'Data Perumahan')
 
@@ -43,9 +43,14 @@
         <div class="card-header">
             <h2 class="card-title fw-bold fs-4">Data Perumahan</h2>
             <div class="card-tools">
+                @can('admin.perumahan.import')
+                    <a class="btn btn-sm btn-primary" href="{{ route('admin.perumahan.import') }}" data-toggle="modal" data-target="#modalLgId" data-modal-title="Import Data">
+                        <i class="fas fa-file-excel" aria-hidden="true"></i> Import
+                    </a>
+                @endcan
                 @can('admin.perumahan.create')
                     <a class="btn btn-sm btn-primary" href="{{ route('admin.perumahan.create') }}" data-toggle="modal" data-target="#modalLgId" data-modal-title="Tambah Data">
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i> Tambah
                     </a>
                 @endcan
             </div>
@@ -116,7 +121,9 @@
                 </div>
             @endif
 
-            {{ $dataTable->table() }}
+            <div class="table-responsive">
+                {{ $dataTable->table() }}
+            </div>
         </div>
     </div>
 

@@ -346,7 +346,7 @@ return [
         [
             "url" => "#",
             "icon" => "nav-icon fas fa-edit",
-            "text" => "Data Spasial",
+            "text" => "Data Utama",
             /* "icon" => "right fas fa-angle-left", */
             "submenu" => [
                 [
@@ -356,10 +356,10 @@ return [
                     "text" => "Perumahan",
                 ],
                 [
-                    //"url" => "admin.pemukiman",
-                    "route" => "admin.pemukiman.index",
+                    //"url" => "admin.permukiman",
+                    "route" => "admin.permukiman.index",
                     "icon" => "far fa-circle nav-icon",
-                    "text" => "Pemukiman",
+                    "text" => "Permukiman",
                 ],
                 [
                     //"url" => "admin.psu",
@@ -368,6 +368,18 @@ return [
                     "text" => "PSU",
                 ],
             ],
+        ],
+        [
+            //"url" => "admin.pengajuan",
+            "route" => "admin.pengajuan.index",
+            "icon" => "nav-icon fas fa-file-contract",
+            "text" => "Usulan",
+        ],
+        [
+            //"url" => "admin.monitoring",
+            "route" => "admin.monitoring.index",
+            "icon" => "nav-icon fas fa-calendar-check",
+            "text" => "Monitoring",
         ],
         [
             "url" => "#",
@@ -433,7 +445,7 @@ return [
                 ],
             ],
         ],
-        [
+        /* [
             "url" => 'http: //localhost:8080/geoserver/web/?5',
             "icon" => "nav-icon fas fa-map-marked",
             "text" => "Geoserver",
@@ -442,19 +454,7 @@ return [
             "url" => 'http: //localhost/pgadmin4/browser/',
             "icon" => "nav-icon fas fa-database",
             "text" => "PGAdmin",
-        ],
-        [
-            //"url" => "admin.pengajuan",
-            "route" => "admin.pengajuan.index",
-            "icon" => "nav-icon fas fa-file-contract",
-            "text" => "Usulan",
-        ],
-        [
-            //"url" => "admin.monitoring",
-            "route" => "admin.monitoring.index",
-            "icon" => "nav-icon fas fa-calendar-check",
-            "text" => "Monitoring",
-        ],
+        ], */
         /* [
             //"url" => "admin.login",
             "route" => "logout",

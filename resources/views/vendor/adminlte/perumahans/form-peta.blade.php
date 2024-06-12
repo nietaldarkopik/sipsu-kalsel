@@ -49,6 +49,16 @@ psuperumahan.destroyFromPerumahan --}}
         .then(data => {
             var geojsonLayer = L.geoJSON(data).addTo(map);
             map.fitBounds(geojsonLayer.getBounds());
+            L.geoJSON(data, {
+                onEachFeature: function (feature, layer) {
+                    var popupContent = "<table>";
+                    for (var key in feature.properties) {
+                        popupContent += "<tr><td><strong>" + key + ":</strong></td><td>" + feature.properties[key] + "</td></tr>";
+                    }
+                    popupContent += "</table>";
+                    layer.bindPopup(popupContent);
+                }
+            }).addTo(map);
         });
     }
 </script>

@@ -356,7 +356,7 @@
 body {
   font-family: "Poppins Regular", sans-serif;
   color: #444444;
-  background-color: #d3a852ed;
+  background-color: #f7f0e1ed;
 }
 
 a {
@@ -2839,4 +2839,25 @@ section {
   .card-badge-home{
     margin-top: 15px;
   }
+}
+
+.dt-paging.paging_full_numbers{
+  margin: 0.85em 0 !important;
+  float:right;
+}
+div.dt-container div.dt-info {
+  float:left;
+}
+.dt-length{
+  float:left;
+  margin: 0.85em 0 !important;
+}
+.dt-search{
+  float:right;
+  margin: 0.85em 0 !important;
+}
+
+.main-content{
+  margin-top: 50px;
+  min-height: 95vh !important;
 }

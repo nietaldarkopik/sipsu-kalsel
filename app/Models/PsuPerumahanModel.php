@@ -27,6 +27,9 @@ class PsuPerumahanModel extends Model
     }
     
     public function getKategori(){
-        return $this->belongsTo(PsuModel::class, 'id_kategori');
+        return $this->belongsTo(KategoriPsuModel::class, 'id_kategori');
+    }
+    public function getPsu(){
+        return $this->belongsTo(PsuModel::class, 'id_psu');
     }
 }

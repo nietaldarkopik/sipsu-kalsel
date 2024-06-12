@@ -15,6 +15,7 @@ class PerumahanModel extends Model
     protected $table = 'perumahan'; // Nama tabel dalam database
 
     protected $fillable = [
+        'provinsi_id',
         'kabkota_id',
         'kecamatan_id',
         'kelurahan_id',
@@ -47,6 +48,7 @@ class PerumahanModel extends Model
         'geometry',
         'geometry_file',
         'file_survey',
+        'keterangan'
     ];
     
     protected $dates = ['deleted_at'];

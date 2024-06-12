@@ -12,7 +12,7 @@ class PsuModel extends Model
     protected $table = 'psu'; // Nama tabel dalam database
 
     protected $fillable = [
-        'kategori','jenis','title','deskripsi'
+        'kategori','jenis','judul','deskripsi'
     ];    
     
     public function getJenisPsu(){

@@ -1,30 +1,29 @@
-
 <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="./">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./perumahan.php">
+    <li class="nav-item">
+        <a class="nav-link" href="./">Beranda</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('front.perumahan') }}">
             Data Perumahan
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./peta.php">
-            Peta Perumahan
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./peta.php">
-            Peta PSU
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./statistik.php">Statistik</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./panduan.php">Panduan</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./tentang.php">Tentang</a>
-          </li>
-        </ul>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('front.permukiman') }}">
+            Peta Permukiman
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('front.peta') }}">
+            Peta
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('front.statistik') }}">Statistik</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('front.page', ['slug' => 'panduan']) }}">Panduan</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('front.page', ['slug' => 'tentang']) }}">Tentang</a>
+    </li>
+</ul>

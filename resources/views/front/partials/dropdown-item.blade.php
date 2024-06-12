@@ -1,1 +1,1 @@
-<li><a class="dropdown-item fs-5 lh-1 oswald-regular" href="./data-perumahan.php">{{ $menu?->title }}</a></li>
+<li><a class="dropdown-item fs-5 lh-1 oswald-regular" href="{{ route('front.'.$menu?->code) }}">{{ $menu?->title }}</a></li>
