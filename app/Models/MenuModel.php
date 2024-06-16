@@ -12,6 +12,10 @@ class MenuModel extends Model
     protected $table = 'menus'; // Nama tabel dalam database
 
     protected $fillable = [
-        "id","menu_group_id","parent_id","code","title"
+        "menu_group_id","parent_id","type_link","code","title","sort_order"
     ];
+
+    public function getPage(){
+        return $this->belongsTo(PageModel::class, 'code', 'slug');
+    }
 }

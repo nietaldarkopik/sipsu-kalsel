@@ -29,6 +29,10 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('front/css/style.css') }}" rel="stylesheet">
     <script src="{{ asset('front/vendor/jquery-3.7.1.min.js') }}"></script>
+    <script>
+        var base_url = "{{ url('/') }}";
+        var asset_url = "{{ asset('/') }}";
+    </script>
     @yield('css')
 </head>
 

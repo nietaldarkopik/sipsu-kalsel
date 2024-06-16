@@ -233,223 +233,223 @@ const styleFunction = function (feature) {
 // Daftar file GeoJSON yang akan dimuat
 var geojsonFiles = [
 	{
-		url: './uploads/json/indonesia.geojson',
+		url: asset_url + '/uploads/json/indonesia.geojson',
 		minZoom: 1, // visible at zoom levels above 14
 		maxZoom: 4, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/indonesia-province.geojson',
+		url: asset_url + '/uploads/json/indonesia-province.geojson',
 		minZoom: 3, // visible at zoom levels above 14
 		maxZoom: 8, // visible at zoom levels above 14
 	},
 	/* 
 	{
-		url: './uploads/json/all_kabkota_ind.geojson',
+		url: asset_url + '/uploads/json/all_kabkota_ind.geojson',
 		minZoom: 6, // visible at zoom levels above 14
 		maxZoom: 9, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/kabkota.geojson',
+		url: asset_url + '/uploads/json/kabkota.geojson',
 		minZoom: 9, // visible at zoom levels above 14
 		maxZoom: 12, // visible at zoom levels above 14
 	}, */
 	{
-		url: './uploads/json/kalsel_kabkota.geojson',
+		url: asset_url + '/uploads/json/kalsel_kabkota.geojson',
 		minZoom: 8, // visible at zoom levels above 14
 		maxZoom: 12, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TAPIN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TAPIN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TANAHLAUT.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TANAHLAUT.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TANAHBUMBU.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TANAHBUMBU.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TABALONG.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_TABALONG.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_KOTABANJARBARU.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_KOTABANJARBARU.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_HULUSUNGAIUTARA.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_HULUSUNGAIUTARA.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_HULUSUNGAITENGAH.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_HULUSUNGAITENGAH.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_HULUSUNGAISELATAN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_HULUSUNGAISELATAN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BARITOTIMUR.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BARITOTIMUR.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BARITOKUALA.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BARITOKUALA.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BANJAR.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BANJAR.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BALANGAN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_BALANGAN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASIKECAMATAN_AR_50K_KOTA_BANJARMASIN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASIKECAMATAN_AR_50K_KOTA_BANJARMASIN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_BALANGAN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_BALANGAN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_BANJAR.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_BANJAR.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_BARITOKUALA.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_BARITOKUALA.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_BARITOTIMUR.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_BARITOTIMUR.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_HULUSUNGAISELATAN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_HULUSUNGAISELATAN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_HULUSUNGAITENGAH.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_HULUSUNGAITENGAH.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_HULUSUNGAIUTARA.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_HULUSUNGAIUTARA.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_KOTA_BANJARMASIN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_KOTA_BANJARMASIN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_KOTABANJARBARU.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_KOTABANJARBARU.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_TABALONG.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_TABALONG.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_TANAHBUMBU.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_TANAHBUMBU.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_TANAHLAUT.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_TANAHLAUT.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/ADMINISTRASI_LN_50K_TAPIN.geojson',
+		url: asset_url + '/uploads/json/ADMINISTRASI_LN_50K_TAPIN.geojson',
 		minZoom: 12, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_BALANGAN.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_BALANGAN.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_BANJAR.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_BANJAR.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_BARITOKUALA.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_BARITOKUALA.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_BARITOTIMUR.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_BARITOTIMUR.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_HULUSUNGAISELATAN.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_HULUSUNGAISELATAN.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_HULUSUNGAITENGAH.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_HULUSUNGAITENGAH.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_HULUSUNGAIUTARA.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_HULUSUNGAIUTARA.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_KOTA_BANJARMASIN.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_KOTA_BANJARMASIN.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_KOTABANJARBARU.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_KOTABANJARBARU.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_TABALONG.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_TABALONG.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_TANAHBUMBU.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_TANAHBUMBU.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_TANAHLAUT.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_TANAHLAUT.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	},
 	{
-		url: './uploads/json/TOPONIMI_PT_50K_TAPIN.geojson',
+		url: asset_url + '/uploads/json/TOPONIMI_PT_50K_TAPIN.geojson',
 		minZoom: 10, // visible at zoom levels above 14
 		maxZoom: 20, // visible at zoom levels above 14
 	}

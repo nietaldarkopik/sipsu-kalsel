@@ -3,13 +3,8 @@
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div id="section4" class="container-fluid section p-0 m-0" style="background-image: url('assets/img/hero-bg.png');">
-  <div class="content rounded-0" style="backdrop-filter: blur(5px); width: 100%; height: 150px;"></div>
-</div>
-
-
-<div id="section3" class="container blog">
-  <div class="row entry entry-single">
+<div id="section3" class="container mt-5 pt-5">
+  <div class="row bg-light mt-5 py-5 bg-light mt-5 py-5">
     <div class="col-12">
 
       <h2 class="text-center">Grafik Jumlah Perumahan</h2>
@@ -34,9 +29,9 @@
 </div>
 
 
-<div id="section4" class="container blog">
+<div id="section4" class="container">
 
-  <div class="row entry entry-single">
+  <div class="row bg-light mt-5 py-5">
     <div class="col-12">
       <h2 class="text-center">Grafik Jumlah PSU</h2>
       <p class="text-center">Berikut adalah Grafik Jumlah PSU setiap kabupaten/kota</p>
@@ -60,9 +55,9 @@
 </div>
 
 
-<div id="section4" class="container blog">
+<div id="section4" class="container bg-light my-0">
 
-  <div class="row entry entry-single">
+  <div class="row bg-light mt-5 py-5">
     <div class="col-12">
       <h2 class="text-center">Grafik BAST</h2>
       <p class="text-center">Berikut adalah Grafik status BAST setiap kabupaten/kota</p>
@@ -87,8 +82,8 @@
 </div>
 
 
-<div id="section4" class="container blog">
-  <div class="row entry entry-single">
+<div id="section4" class="container bg-light my-0">
+  <div class="row bg-light mt-5 py-5">
     <div class="col-12">
       <h2 class="text-center">Grafik Jumlah Jenis PSU</h2>
       <p class="text-center">Berikut adalah Grafik Jumlah Jenis PSU setiap kabupaten/kota</p>

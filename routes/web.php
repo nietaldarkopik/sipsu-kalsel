@@ -25,6 +25,8 @@ use App\Http\Controllers\Admin\UbahPasswordController;
 use App\Http\Controllers\Front\FrontPermukimanController;
 use App\Http\Controllers\Front\FrontPerumahanController;
 use App\Http\Controllers\Front\FrontPsuController;
+use App\Http\Controllers\Front\FrontPageController;
+use App\Http\Controllers\Front\FrontMenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +40,6 @@ use App\Http\Controllers\Front\FrontPsuController;
 */
 
 Route::get('/', [App\Http\Controllers\Front\PageController::class,'index']);
-
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
@@ -137,32 +136,22 @@ Route::prefix('admin')->name('admin.')->group(function(){
 Route::name('front.')->group(function(){
         
     Route::get('permukiman', [FrontPermukimanController::class,'index'])->name('permukiman');
-    Route::get('permukiman/peta/{permukiman}', [FrontPermukimanController::class,'index'])->name('permukiman.peta');
-    Route::get('permukiman/print/{permukiman}', [FrontPermukimanController::class,'index'])->name('permukiman.print');
-    Route::get('permukiman/detail/{permukiman}', [FrontPermukimanController::class,'index'])->name('permukiman.detail');
-    Route::get('permukiman/pdf/{permukiman}', [FrontPermukimanController::class,'index'])->name('permukiman.pdf');
+    Route::get('permukiman/peta/{id}', [FrontPermukimanController::class,'index'])->name('permukiman.peta');
+    Route::get('permukiman/print/{id}', [FrontPermukimanController::class,'index'])->name('permukiman.print');
+    Route::get('permukiman/detail/{id}', [FrontPermukimanController::class,'index'])->name('permukiman.detail');
+    Route::get('permukiman/pdf/{id}', [FrontPermukimanController::class,'index'])->name('permukiman.pdf');
     Route::get('perumahan', [FrontPerumahanController::class,'index'])->name('perumahan');
-    Route::get('perumahan/peta/{perumahan}', [FrontPerumahanController::class,'index'])->name('perumahan.peta');
-    Route::get('perumahan/print/{perumahan}', [FrontPerumahanController::class,'index'])->name('perumahan.print');
-    Route::get('perumahan/detail/{perumahan}', [FrontPerumahanController::class,'index'])->name('perumahan.detail');
-    Route::get('perumahan/pdf/{perumahan}', [FrontPerumahanController::class,'index'])->name('perumahan.pdf');
+    Route::get('perumahan/peta/{id}', [FrontPerumahanController::class,'index'])->name('perumahan.peta');
+    Route::get('perumahan/print/{id}', [FrontPerumahanController::class,'index'])->name('perumahan.print');
+    Route::get('perumahan/detail/{id}', [FrontPerumahanController::class,'index'])->name('perumahan.detail');
+    Route::get('perumahan/pdf/{id}', [FrontPerumahanController::class,'index'])->name('perumahan.pdf');
     Route::get('psu', [FrontPsuController::class,'index'])->name('psu');
     Route::get('psu/peta/{psu}', [FrontPsuController::class,'index'])->name('psu.peta');
     Route::get('psu/print/{psu}', [FrontPsuController::class,'index'])->name('psu.print');
     Route::get('psu/detail/{psu}', [FrontPsuController::class,'index'])->name('psu.detail');
     Route::get('psu/pdf/{psu}', [FrontPsuController::class,'index'])->name('psu.pdf');
                 
-    Route::get('peta', function() {
-        return view('front.layouts.peta');
-    })->name('peta');
-        
-    Route::get('statistik', function() {
-        return view('front.layouts.statistik');
-    })->name('statistik');
-        
-    Route::get('page', function() {
-        return view('front.layouts.page');
-    })->name('page');
+    Route::get('page/{menu?}', [FrontPageController::class,'page'])->name('page');
 
 });
 

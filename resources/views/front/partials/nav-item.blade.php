@@ -3,7 +3,13 @@ $submenus = \App\Models\MenuModel::where('parent_id','=',$menu->id)->orderBy('so
 @endphp
 @if($submenus->count() == 0)
 	<li class="nav-item">
-		<a class="nav-link fs-5 lh-1 oswald-regular" href="./">{{ $menu->title }}</a>
+		@if($menu->type_link == 'page')
+		<a class="nav-link fs-5 lh-1 oswald-regular" href="{{ route('front.page',['menu' => $menu->getPage()->get()->first()?->slug])}}">{{ $menu->title }}</a>
+		@elseif($menu->type_link == 'route')
+		<a class="nav-link fs-5 lh-1 oswald-regular" href="{{ route('front.'.$menu->getPage()->get()->first()?->slug ?? 'page')}}">{{ $menu->title }}</a>
+		@else
+		<a class="nav-link fs-5 lh-1 oswald-regular" href="{{ $menu->code }}">{{ $menu->title }}</a>
+		@endif
 	</li>
 @else
 	<li class="nav-item dropdown">

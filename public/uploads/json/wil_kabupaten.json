@@ -1,0 +1,70 @@
+[
+	{
+		"type": "header",
+		"version": "5.2.0",
+		"comment": "Export to JSON plugin for PHPMyAdmin"
+	},
+	{
+		"type": "database",
+		"name": "webgis"
+	},
+	{
+		"type": "table",
+		"name": "wil_kabupaten",
+		"database": "webgis",
+		"data": [
+			{
+				"id_kabupaten": "6301",
+				"nama_kabupaten": "KAB. TANAH LAUT"
+			},
+			{
+				"id_kabupaten": "6302",
+				"nama_kabupaten": "KAB. KOTABARU"
+			},
+			{
+				"id_kabupaten": "6303",
+				"nama_kabupaten": "KAB. BANJAR"
+			},
+			{
+				"id_kabupaten": "6304",
+				"nama_kabupaten": "KAB. BARITO KUALA"
+			},
+			{
+				"id_kabupaten": "6305",
+				"nama_kabupaten": "KAB. TAPIN"
+			},
+			{
+				"id_kabupaten": "6306",
+				"nama_kabupaten": "KAB. HULU SUNGAI SELATAN"
+			},
+			{
+				"id_kabupaten": "6307",
+				"nama_kabupaten": "KAB. HULU SUNGAI TENGAH"
+			},
+			{
+				"id_kabupaten": "6308",
+				"nama_kabupaten": "KAB. HULU SUNGAI UTARA"
+			},
+			{
+				"id_kabupaten": "6309",
+				"nama_kabupaten": "KAB. TABALONG"
+			},
+			{
+				"id_kabupaten": "6310",
+				"nama_kabupaten": "KAB. TANAH BUMBU"
+			},
+			{
+				"id_kabupaten": "6311",
+				"nama_kabupaten": "KAB. BALANGAN"
+			},
+			{
+				"id_kabupaten": "6371",
+				"nama_kabupaten": "KOTA BANJARMASIN"
+			},
+			{
+				"id_kabupaten": "6372",
+				"nama_kabupaten": "KOTA BANJARBARU"
+			}
+		]
+	}
+]

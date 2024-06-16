@@ -4,11 +4,10 @@
 
 <div id="section1" class="section">
     <div class="container-fluid mt-4 text-center p-0 m-0">
-        <div class="row p-0 m-0">
+        <div class="row p-0 m-0 vh-100">
             <div id="map" class="col-12 p-0"></div>
         </div>
     </div>
-    </button>
 </div>
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="Id1"
@@ -272,95 +271,105 @@
         </div>
     </div>
 </div>
+@endsection
 
-<script>
-    var modalId = document.getElementById('modalId');
+@section('css')
+    @parent
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" preload />
+    <link rel="stylesheet" href="{{ asset('css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/css/map.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/css/ol.css') }}" />
+    <style>
+        .ol-popup {
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            bottom: 12px;
+            left: -50px;
+            min-width: 480px;
+        }
+    
+        .ol-popup:after,
+        .ol-popup:before {
+            top: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+    
+        /* .ol-popup:after {
+          border-top-color: white;
+          border-width: 10px;
+          left: 48px;
+          margin-left: -10px;
+        }
+        .ol-popup:before {
+          border-top-color: #cccccc;
+          border-width: 11px;
+          left: 48px;
+          margin-left: -11px;
+        }
+        .ol-popup-closer {
+          text-decoration: none;
+          position: absolute;
+          top: 2px;
+          right: 8px;
+        }
+        .ol-popup-closer:after {
+          content: "✖";
+        } */
+    </style>
+    <style>
+        #filter-form {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+@endsection
+@section('js')
+    @parent
+    
+    {{-- @include("front.partials.foot-script") --}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{{ asset('js/slider.js') }}"></script>
 
-    modalId.addEventListener('show.bs.modal', function (event) {
-        // Button that triggered the modal
-        let button = event.relatedTarget;
-        // Extract info from data-bs-* attributes
-        let recipient = button.getAttribute('data-bs-whatever');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="{{ asset('front/vendor/openlayers/build/full/ol.js') }}"></script>
+    <script src="{{ asset('front/js/peta-v2.js') }}"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+            $('.modal-dialog').draggable({
+                handle: ".modal-header"
+            });
+        })
+    </script>
+    <script>
+        var modalId = document.getElementById('modalId');
 
-        // Use above variables to manipulate the DOM
-    });
-</script>
+        modalId.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            let button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            let recipient = button.getAttribute('data-bs-whatever');
 
-
-@include("partials/foot-script")
-
-<link rel="stylesheet" href="map/style.css" />
-<style>
-    .ol-popup {
-        position: absolute;
-        background-color: white;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid #cccccc;
-        bottom: 12px;
-        left: -50px;
-        min-width: 480px;
-    }
-
-    .ol-popup:after,
-    .ol-popup:before {
-        top: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-    }
-
-    /* .ol-popup:after {
-      border-top-color: white;
-      border-width: 10px;
-      left: 48px;
-      margin-left: -10px;
-    }
-    .ol-popup:before {
-      border-top-color: #cccccc;
-      border-width: 11px;
-      left: 48px;
-      margin-left: -11px;
-    }
-    .ol-popup-closer {
-      text-decoration: none;
-      position: absolute;
-      top: 2px;
-      right: 8px;
-    }
-    .ol-popup-closer:after {
-      content: "✖";
-    } */
-</style>
-<style>
-    #filter-form {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 1000;
-        background-color: white;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    }
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="./assets/vendor/openlayers/build/full/ol.js"></script>
-<script src="./assets/js/peta-v2.js"></script>
-<script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-</script>
-
-<script>
-    $(document).ready(function () {
-        $('.modal-dialog').draggable({
-            handle: ".modal-header"
+            // Use above variables to manipulate the DOM
         });
-    })
-</script>
+    </script>
 @endsection
